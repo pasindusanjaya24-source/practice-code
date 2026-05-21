@@ -1,3 +1,12 @@
+'''root = tk.Tk()
+root.title("Tkinter App එකක්")
+
+
+button = tk.Button(root, text="මාව Click කරන්න")
+button.pack()
+
+root.mainloop()'''
+
 with open("shop_items.txt","w")as f:
   f.write(f"soap:{100}\n")
   f.write(f"toothpaste:{130}\n")
@@ -41,7 +50,8 @@ try:
 except FileNotFoundError:
   print("can't found file!\n")        
 print(f"amal is entered {total_count} time")  
-#next question eka.
+
+#next question 
 
 with open("grades.txt","w")as d:
   d.write("kasun:45\n")
@@ -68,11 +78,3 @@ def  check_grades():
 check_grades()
 import tkinter as tk
 
-root = tk.Tk()
-root.title("Tkinter App එකක්")
-
-# බටන් එකක් හදන හැටි
-button = tk.Button(root, text="මාව Click කරන්න")
-button.pack()
-
-root.mainloop()
