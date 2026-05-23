@@ -18,10 +18,18 @@ def remainder(a,b):
     except ZeroDivisionError as e:
         print(e)
         return None
+def get_number(promptmassage):
+    while True:
+        num_str=input(promptmassage).strip()
+        if '#' in num_str:
+            return -1 
+        if '$' in num_str:
+            return 0
+        try:
+            return float(num_str)
+        except ValueError:
+            print("Not a valid number,please enter again")          
 
-
-#-------------------------------------
-#TODO: Write the select_op(choice) function here
 #This function sould cover Task 1 (Section 2) and Task 3
 def select_op(choice):
     if '#' in choice:
@@ -32,29 +40,19 @@ def select_op(choice):
         print("Unrecognized operation")
         return 0
 #get 1st input for calculate
-    while True:
-        num1_str=input("Enter first number: ").strip()
-        if '#' in num1_str:
-            return -1 
-        if '$' in num1_str:
-            return 0
-        try:
-            num1=float(num1_str)
-            break
-        except ValueError:
-            print("Not a valid number,please enter again")  
+    num1=get_number("Enter First Number: ")
+    if num1 == -1: 
+        return -1
+    if num1 == 0:
+        return 0    
+
 #get 2nd input for calculate
-    while True:
-        num2_str=input("Enter second number: ").strip()
-        if '#' in num2_str:
-            return -1 
-        if '$' in num2_str:
-            return 0
-        try:
-            num2=float(num2_str)
-            break
-        except ValueError:
-            print("Not a valid number,please enter again")  
+    num2=get_number("Enter Second Number: ")
+    if num2 == -1: 
+        return -1
+    if num2 == 0:
+        return 0    
+    
         
     if choice == "+":
         result=add(num1,num2)
@@ -71,10 +69,8 @@ def select_op(choice):
     print(f"{num1} {choice} {num2} = {result}")
     return 0                        
 
-#End the select_op(choice) function here
-#-------------------------------------
 #This is the main loop. It covers Task 1 (Section 1)
-#YOU DO NOT NEED TO CHANGE ANYTHING BELOW THIS LINE
+
 while True:
   print("Select operation.")
   print("1.Add      : + ")
@@ -91,7 +87,6 @@ while True:
   choice = input("Enter choice(+,-,*,/,^,%,#,$): ")
   print(choice)
   if(select_op(choice) == -1):
-    #program ends here
-    print("Done. Terminating")
+    print("Done. Terminating")   #program ends here
     exit()
 
