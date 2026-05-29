@@ -1,18 +1,21 @@
 package practicejava;
-import java.util.Arrays;
 import java.util.Scanner;
 public class Main{
 	public static void main(String []args) {
-		/*Scanner x=new Scanner(System.in);
-		System.out.println("Enter a Month name: ");
-		String num=x.nextLine();*/
-		int []array_1= {40, 12, 25, 9, 32};
-		System.out.println(Arrays.toString(array_1));
-		Arrays.sort(array_1);
-		System.out.println(Arrays.toString(array_1));
-
-		
-		//x.close();
-		
+		Scanner x =new Scanner(System.in);
+		int totalBonus = 50000;
+		System.out.print("Enter a Number of Employee: ");
+		int totalEmployees=x.nextInt();
+		shareBonus(totalBonus,totalEmployees);
+		x.close();
+	}
+	public static void shareBonus(int bonus, int employees) {
+		try {
+			int av=bonus/employees;
+			System.out.print("amount for per employee: "+av);
+		}
+		catch(ArithmeticException e){
+			System.out.print("Error: Number of employees cannot be zero!");
+		}
 	}
 }

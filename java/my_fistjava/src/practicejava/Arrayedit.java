@@ -37,6 +37,23 @@ public class Arrayedit{
 			}
 			System.out.println();
 		}
+		int[][] studentMarks = {
+			    {40, 55, 65},  
+			    {90, 85, 95}, 
+			    {70, 80, 75}   
+			};
+		
+		System.out.println("higthest average is:"+findHighestAverage(studentMarks));
 		x.close();
 	}
+public static double findHighestAverage(int[][] marks) {
+	double hi_ave=0.0;
+	for(int i=0;i<marks.length;i++) {
+		double sum1=0;
+		for(int j=0;j<marks[i].length;j++) {
+			sum1+=marks[i][j];
+		}double average=sum1/3.0;
+		hi_ave=Math.max(hi_ave,average);
+	}return hi_ave;
+}
 }
