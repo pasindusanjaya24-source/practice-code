@@ -21,7 +21,7 @@ public class Main{
 		
 		
 		
-		//x.close();
+		x.close();
 	}
 	public static void shareBonus(int bonus, int employees) {
 		try {
