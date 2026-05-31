@@ -10,6 +10,8 @@ public class new_one {
 		String name=x.nextLine();
 		System.out.print("Enter address: ");
 		String address=x.nextLine();
+		
+
 
 		int []array1=new int[5];
 		for(int i=0;i<5;i++) {
@@ -17,7 +19,7 @@ public class new_one {
 			int index=x.nextInt();
 			array1[i]=index;
 		}
-		System.out.println(Arrays.toString(array1));
+		Student y=new Student(name,address);
 			
 		
 		System.out.println("1.Show details");
@@ -26,8 +28,7 @@ public class new_one {
 		System.out.println("4.Show details");
 		System.out.print("\nEnter your option: ");
 		int option=x.nextInt();
-		
-		Student y=new Student(name,address);
+		System.out.println("--------------Student Management System-----------");
 		switch(option) {
 		case 1:
 			y.showDetails();
@@ -61,7 +62,7 @@ class Student{
 	}
 	
 	public void showDetails() {
-		System.out.println("--------------Student Management System-----------");
+		
 		System.out.println("your name is"+name);
 		System.out.println("your adress is"+address);
 	}
