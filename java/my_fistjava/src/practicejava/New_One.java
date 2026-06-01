@@ -49,7 +49,7 @@ public class New_One {
 				}
 		    }
 		catch(InputMismatchException e){
-	    	System.out.print("error: wrong input!");
+	    	System.out.print(e+"\n error:invaild input!");
 	    }
 		finally {
 			x.close();
