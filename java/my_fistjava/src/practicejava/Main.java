@@ -61,6 +61,18 @@ public class Main{
 			
 			checkotp( generateotp(),x);
 		}
+		
+		Customer customer1=new Customer("amal","no:267,abewela","97127379v",29);
+		System.out.println(customer1.getName());
+		System.out.println(customer1.getAddress());
+		System.out.println(customer1.getNic());
+		System.out.println(customer1.getAge());
+		
+		Customer customer2=new Customer();
+		customer2.setName("nimal deshapriya");
+		System.out.println("new customer name is: "+customer2.getName());
+		
 	}
+	
 	
 }
