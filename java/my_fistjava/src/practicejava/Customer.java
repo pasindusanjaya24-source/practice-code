@@ -6,39 +6,44 @@ public class Customer {
 	private String nic;
 	private int age;
 	
-	Customer(){ //no arg constructor
+	
+	public Customer() {
+		
 	}
-	Customer(String name,String address,String nic,int age){              //full args constructor
-		this.name=name;
-		this.address=address;
-		this.nic=nic;
-		this.age=age;
-	 
+	
+	public Customer(String name, String address, String nic, int age) {
+		this.name = name;
+		this.address = address;
+		this.nic = nic;
+		this.age = age;
 	}
-	public void setName(String name) {
-		this.name=name;
-	}
-	public void setAddress(String address) {
-		this.address=address;
-	}
-	public void setNic(String nic) {
-		this.nic=nic;
-	}
-	public void setAge(int age) {
-		if (age > 0) { 
-            this.age = age;
-        }
-	}
+
+
+
 	public String getName() {
 		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public String getAddress() {
 		return address;
 	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
 	public String getNic() {
 		return nic;
+	}
+	public void setNic(String nic) {
+		this.nic = nic;
 	}
 	public int getAge() {
 		return age;
 	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
 }
