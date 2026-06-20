@@ -1,0 +1,269 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8fafc; /* ලස්සන, පිරිසිදු ඇපල් ස්ටෝර් පසුබිමක් */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    padding-bottom: 50px;
+}
+
+/* -----------------------------------------
+   2. Enhanced Navigation Bar
+----------------------------------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f172a; /* Premium Dark Theme */
+    color: white;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.logo-highlight {
+    color: #f59e0b; /* කැපී පේන රන්වන් පාට */
+    margin-right: 2px;
+}
+
+.search-container input {
+    width: 350px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #334155;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-container input::placeholder {
+    color: #94a3b8;
+}
+
+.search-container input:focus {
+    background-color: white;
+    color: #0f172a;
+    width: 400px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: white;
+}
+
+.cart-icon {
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* -----------------------------------------
+   3. Main Content Layout
+----------------------------------------- */
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+}
+
+.section-title-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title-box h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.section-title-box p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* 🚀 Grid System එක (කාඩ් පැත්තෙන් පැත්තට තියන්න) */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* -----------------------------------------
+   4. Luxury Product Card UI
+----------------------------------------- */
+.product-card {
+    background-color: white;
+    border-radius: 16px;
+    width: 290px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+}
+
+/* Badges */
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    color: white;
+    z-index: 10;
+}
+
+.premium-badge { background-color: #8b5cf6; } /* වයලට් */
+.new-badge { background-color: #10b981; }     /* කොළ */
+
+/* Image Frame */
+.image-box {
+    background-color: #fafafa;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Card Content Area */
+.card-info {
+    padding: 20px;
+}
+
+.product-category {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f172a;
+    line-height: 1.4;
+    height: 44px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+/* Price & Rating Section */
+.price-rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.old-price {
+    color: #94a3b8;
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.new-price {
+    color: #ef4444;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.rating {
+    background-color: #f1f5f9;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.offer-tag {
+    display: block;
+    font-size: 12px;
+    color: #059669;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* 🛒 Interactive Add to Cart Button */
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #f59e0b; /* මවුස් එක ගෙනිච්චම රන්වන් පාට වෙනවා */
+    color: #0f172a;
+}
