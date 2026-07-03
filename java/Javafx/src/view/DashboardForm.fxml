@@ -6,15 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane fx:id="root" prefHeight="398.0" prefWidth="341.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+<AnchorPane fx:id="root" prefHeight="398.0" prefWidth="341.0" style="-fx-background-color: #ffffff; -fx-background-image: url('/image/bg_image.png');" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
    <children>
-      <Label layoutX="113.0" layoutY="14.0" prefHeight="36.0" prefWidth="129.0" style="-fx-background-color: #ffffff;" text="Dashboard">
+      <Label layoutX="113.0" layoutY="14.0" prefHeight="45.0" prefWidth="129.0" text="Dashboard">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
-      <Button layoutX="111.0" layoutY="93.0" mnemonicParsing="false" onAction="#btnTestFormOnAction" prefHeight="36.0" prefWidth="119.0" style="-fx-background-color: green; -fx-background-radius: 5px;" text="Test Form" textFill="#f8f0f0">
+      <Button layoutX="106.0" layoutY="96.0" mnemonicParsing="false" onAction="#btnTestFormOnAction" prefHeight="36.0" prefWidth="129.0" style="-fx-background-color: green; -fx-background-radius: 5px;" text="Test Form" textFill="#f8f0f0">
          <font>
             <Font size="17.0" />
          </font>
@@ -22,7 +21,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="106.0" layoutY="149.0" mnemonicParsing="false" onAction="#btnCalculatorFormOnAction" prefHeight="36.0" prefWidth="129.0" style="-fx-background-color: green;" text="Calculator Form" textFill="#f4e9e9">
+      <Button layoutX="106.0" layoutY="143.0" mnemonicParsing="false" onAction="#btnCalculatorFormOnAction" prefHeight="45.0" prefWidth="129.0" style="-fx-background-color: green; -fx-background-radius: 5px;" text="Calculator Form" textFill="#f4e9e9">
          <font>
             <Font size="15.0" />
          </font>
@@ -30,5 +29,15 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Button layoutX="106.0" layoutY="199.0" mnemonicParsing="false" onAction="#btnTaleOnAction" prefHeight="38.0" prefWidth="129.0" style="-fx-background-color: green; -fx-background-radius: 5px;" text="Table Form" textFill="#f8f4f4">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      
+
+
    </children>
 </AnchorPane>
