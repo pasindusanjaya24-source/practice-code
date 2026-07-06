@@ -1,0 +1,20 @@
+CREATE DATABASE todolist;
+USE todolist;
+
+CREATE TABLE user(
+	id VARCHAR(6)PRIMARY KEY,
+	user_name VARCHAR(30)NOT NULL,
+	email VARCHAR(100)NOT NULL,
+	password VARCHAR(100)NOT NULL,
+	CONSTRAINT UNIQUE(email)
+	);
+
+CREATE TABLE todo(
+	id VARCHAR(6)PRIMARY KEY,
+	description VARCHAR(100)NOT NULL,
+	user_id VARCHAR(6)NOT NULL,
+	CONSTRAINT FOREIGN KEY(user_id) REFERENCES user(id)
+);
+
+INSERT INTO user VALUES('U001','Kmal','Kamall12@gmail.com','kamal123');
+INSERT INTO user VALUES('U002','saman','saman245@gmail.com','saman456');
