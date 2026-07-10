@@ -25,8 +25,8 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField layoutX="36.0" layoutY="136.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 6px;" />
-      <PasswordField layoutX="38.0" layoutY="201.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 2px;" />
+      <TextField fx:id="txtUserName" layoutX="36.0" layoutY="136.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 6px;" />
+      <PasswordField fx:id="txtPassword" layoutX="38.0" layoutY="201.0" onAction="#txtPasswordOnAction" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 2px;" />
       <Button layoutX="98.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: blue; -fx-background-radius: 8px;" text="Login" textFill="#f4efef">
          <cursor>
             <Cursor fx:constant="HAND" />

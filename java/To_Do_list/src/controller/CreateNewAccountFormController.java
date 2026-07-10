@@ -1,11 +1,16 @@
 package controller;
 
+import db.DBConnection;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.sql.*;
 
 public class CreateNewAccountFormController {
     public AnchorPane root;
@@ -16,6 +21,7 @@ public class CreateNewAccountFormController {
     public TextField txtUserName;
     public TextField txtEmail;
     public Button btnRegister;
+    public Label lblID;
 
 
     public void initialize(){
@@ -44,6 +50,37 @@ public class CreateNewAccountFormController {
             txtConfirmPassword.setStyle("-fx-border-color: tranparent");
             lblpassworddosenotmatched.setVisible(false);
 
+            String id = lblID.getText();
+            String username = txtUserName.getText();
+            String email = txtEmail.getText();
+            Connection connection=DBConnection.getInstance().getConnection();
+            try {
+                PreparedStatement preparedStatement=connection.prepareStatement("insert into user values (?,?,?,?)");
+                preparedStatement.setObject(1,id);
+                preparedStatement.setObject(2,username);
+                preparedStatement.setObject(3,email);
+                preparedStatement.setObject(4,conformPassword);
+                int i = preparedStatement.executeUpdate();
+                if (i != 0){
+                    Alert alert=new Alert(Alert.AlertType.CONFIRMATION,"Success......!");
+                    alert.showAndWait();
+                    Parent parent= FXMLLoader.load(this.getClass().getResource("../view/LoginForm.fxml"));
+                    Scene scene=new Scene(parent);
+                    Stage primaryStage= (Stage) root.getScene().getWindow();
+                    primaryStage.setScene(scene);
+                    primaryStage.setTitle("login to to-do list");
+                    primaryStage.centerOnScreen();
+                }else{
+                    Alert alert=new Alert(Alert.AlertType.ERROR,"Something Went Wrong");
+                    alert.showAndWait();
+
+                }
+
+            } catch (SQLException | IOException e) {
+                throw new RuntimeException(e);
+            }
+
+
         }
         else{
             txtNewPassword.setStyle("-fx-border-color: red");
@@ -58,6 +95,7 @@ public class CreateNewAccountFormController {
 
     public void btnAddUserOnAction(ActionEvent actionEvent) {
         visible(false);
+        autoGenerateID();
     }
 
     public void visible(boolean v){
@@ -66,5 +104,38 @@ public class CreateNewAccountFormController {
         txtNewPassword.setDisable(v);
         txtConfirmPassword.setDisable(v);
         btnRegister.setDisable(v);
+    }
+    public void autoGenerateID(){
+        Connection connection= DBConnection.getInstance().getConnection(); 
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select id from user order by id desc limit 1");
+            boolean isExist = resultSet.next();
+
+            if(isExist){
+                String oldID = resultSet.getString(1);
+                String oldId = oldID.substring(1,oldID.length());
+                int intId = Integer.parseInt(oldId);
+                System.out.println(intId);
+                intId+=1;
+                if (intId<10){
+                    lblID.setText("U00"+intId);
+                } else if (intId<100) {
+                    lblID.setText("U0"+intId);
+
+                }else{
+                    lblID.setText("U"+intId);
+
+                }
+
+
+            }else {
+                lblID.setText("U001");
+
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
