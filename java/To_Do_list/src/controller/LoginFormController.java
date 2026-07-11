@@ -50,12 +50,17 @@ public class LoginFormController {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             if(resultSet.next()){
+                    String loggedInId = resultSet.getString("id");
+                    String loggedInName = resultSet.getString("user_name");
+
+                    db.UserSession.getInstance().setUserDetails(loggedInId, loggedInName);
                 Parent parent=FXMLLoader.load(this.getClass().getResource("../view/ToDoForm.fxml"));
                 Scene scene=new Scene(parent);
                 Stage primaryStage = (Stage) root.getScene().getWindow();
                 primaryStage.setScene(scene);
                 primaryStage.setTitle("todo list");
                 primaryStage.centerOnScreen();
+
 
             }else{
                 Alert alert=new Alert(Alert.AlertType.ERROR,"Invalid User Name or Password.....!");

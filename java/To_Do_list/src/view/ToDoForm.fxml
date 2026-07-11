@@ -11,13 +11,9 @@
 
 <AnchorPane fx:id="root" prefHeight="483.0" prefWidth="687.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ToDoListFormController">
    <children>
-      <ListView layoutY="64.0" prefHeight="383.0" prefWidth="313.0" />
-      <TextField layoutX="315.0" layoutY="76.0" prefHeight="25.0" prefWidth="354.0" />
-      <Label layoutX="136.0" layoutY="14.0" prefHeight="28.0" prefWidth="96.0" style="-fx-background-color: #ffffff;" text="Welcome ">
-         <font>
-            <Font size="19.0" />
-         </font></Label>
-      <Button layoutX="599.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Update" textFill="#f8f4f4">
+      <ListView fx:id="lstToDo" layoutY="64.0" prefHeight="387.0" prefWidth="331.0" />
+      <TextField fx:id="txtSelectedToDo" layoutX="349.0" layoutY="76.0" prefHeight="25.0" prefWidth="320.0" />
+      <Button fx:id="btnUpdate" layoutX="599.0" layoutY="115.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Update" textFill="#f8f4f4">
          <font>
             <Font size="14.0" />
          </font>
@@ -25,7 +21,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="505.0" layoutY="115.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: red; -fx-background-radius: 7px;" text="Delete" textFill="#fbf6f6">
+      <Button fx:id="btnDelete" layoutX="505.0" layoutY="115.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: red; -fx-background-radius: 7px;" text="Delete" textFill="#fbf6f6">
          <font>
             <Font size="14.0" />
          </font>
@@ -33,7 +29,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="339.0" layoutY="224.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: Blue; -fx-background-radius: 7px;" text="+ Add New To Do" textFill="#fbf6f6">
+      <Button layoutX="339.0" layoutY="224.0" mnemonicParsing="false" onAction="#btnAddNewToDoOnAction" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: Blue; -fx-background-radius: 7px;" text="+ Add New To Do" textFill="#fbf6f6">
          <font>
             <Font size="14.0" />
          </font>
@@ -41,9 +37,9 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Pane layoutX="331.0" layoutY="266.0" prefHeight="113.0" prefWidth="347.0" style="-fx-border-color: black;">
+      <Pane fx:id="subRoot" layoutX="343.0" layoutY="258.0" prefHeight="113.0" prefWidth="331.0" style="-fx-border-color: black;">
          <children>
-            <Button layoutX="209.0" layoutY="57.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Add To List" textFill="#f8f4f4">
+            <Button layoutX="194.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Add To List" textFill="#f8f4f4">
                <font>
                   <Font size="14.0" />
                </font>
@@ -51,16 +47,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField layoutX="19.0" layoutY="14.0" prefHeight="27.0" prefWidth="313.0" />
+            <TextField fx:id="txtNewToDo" layoutX="16.0" layoutY="14.0" onAction="#txtAddOnAction" prefHeight="25.0" prefWidth="299.0" />
          </children></Pane>
-      <Label fx:id="lblUserNameID" layoutX="219.0" layoutY="14.0" prefHeight="28.0" prefWidth="83.0" style="-fx-background-color: #ffffff;" text="username">
+      <Label fx:id="lblUserNameID" layoutX="122.0" layoutY="14.0" prefHeight="43.0" prefWidth="290.0" style="-fx-background-color: #ffffff;" text="username">
          <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblUserID" layoutX="302.0" layoutY="14.0" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: #ffffff;" text="userid">
-         <font>
-            <Font size="18.0" />
+            <Font size="26.0" />
          </font>
       </Label>
       <Button layoutX="529.0" layoutY="439.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="29.0" prefWidth="139.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Log Out" textFill="#f8f4f4">
@@ -74,6 +65,11 @@
       <Label layoutX="284.0" layoutY="453.0" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" text="Designed By @psvide">
          <font>
             <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserID" layoutX="511.0" layoutY="26.0" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #ffffff;" text="id">
+         <font>
+            <Font size="26.0" />
          </font>
       </Label>
    </children>
