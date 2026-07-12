@@ -52,7 +52,10 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblpassworddosenotmatched" layoutX="149.0" layoutY="360.0" prefHeight="17.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" text="password doesn't matched" textFill="#ef2c2c" />
+      <Label fx:id="lblpassworddosenotmatched" layoutX="149.0" layoutY="360.0" prefHeight="17.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" text="password doesn't matched" textFill="#ef2c2c">
+         <font>
+            <Font size="11.0" />
+         </font></Label>
       <Label fx:id="lblID" layoutX="238.0" layoutY="99.0" text="userid " />
       <Button fx:id="btnAddUser" layoutX="193.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnAddUserOnAction" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: blue; -fx-background-radius: 7px;" text="+ add user" textFill="#fbf6f6">
          <font>
@@ -62,5 +65,10 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
+      <Label fx:id="lblEmailError" layoutX="159.0" layoutY="234.0" prefHeight="17.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" text="Invalid Email Address!" textFill="#ef2c2c">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

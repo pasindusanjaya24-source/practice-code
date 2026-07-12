@@ -22,11 +22,13 @@ public class CreateNewAccountFormController {
     public TextField txtEmail;
     public Button btnRegister;
     public Label lblID;
+    public Label lblEmailError;
 
 
     public void initialize(){
         lblpassworddosenotmatched.setVisible(false);
         visible(true);
+        lblEmailError.setVisible(false);
 
     }
 
@@ -43,12 +45,28 @@ public class CreateNewAccountFormController {
     public void register(){
         String newPassword = txtNewPassword.getText();
         String conformPassword = txtConfirmPassword.getText();
+        lblEmailError.setVisible(true);
 
         if(newPassword.equals(conformPassword)){
             System.out.println("equal");
             txtNewPassword.setStyle("-fx-border-color: transparent");
             txtConfirmPassword.setStyle("-fx-border-color: tranparent");
             lblpassworddosenotmatched.setVisible(false);
+
+
+            String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+
+            String userEmail = txtEmail.getText().trim();
+
+
+            if (!userEmail.matches(emailRegex)) {
+                lblEmailError.setText("Invalid Email Address!");
+                txtEmail.setStyle("-fx-border-color: red; -fx-border-radius: 8;");
+
+                return;
+            }
+
+
 
             String id = lblID.getText();
             String username = txtUserName.getText();

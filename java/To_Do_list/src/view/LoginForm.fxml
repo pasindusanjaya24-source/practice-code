@@ -8,26 +8,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="451.0" prefWidth="338.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane fx:id="root" prefHeight="451.0" prefWidth="338.0" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
    <children>
-      <Label layoutX="83.0" layoutY="14.0" prefHeight="34.0" prefWidth="198.0" style="-fx-background-color: #ffffff;" text="Login To Do List">
+      <Label layoutX="60.0" layoutY="14.0" prefHeight="34.0" prefWidth="221.0" style="-fx-background-color: transparent; -fx-text-fill: #0a1931; -fx-font-family: &quot;Segoe UI&quot;; -fx-font-weight: 800;" text="Login To Do List">
          <font>
-            <Font size="23.0" />
+            <Font size="28.0" />
          </font>
       </Label>
-      <Label layoutX="36.0" layoutY="95.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #ffffff;" text="User Name :">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="32.0" layoutY="162.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #ffffff;" text="Password :">
+      <Label layoutX="36.0" layoutY="95.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #f8fafc; -fx-font-family: &quot;Segoe UI&quot;; -fx-text-fill: #636e72;" text="User Name :">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUserName" layoutX="36.0" layoutY="136.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 6px;" />
-      <PasswordField fx:id="txtPassword" layoutX="38.0" layoutY="201.0" onAction="#txtPasswordOnAction" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 2px;" />
-      <Button layoutX="98.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: blue; -fx-background-radius: 8px;" text="Login" textFill="#f4efef">
+      <Label layoutX="32.0" layoutY="162.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #f8fafc; -fx-font-family: &quot;Segoe UI&quot;; -fx-text-fill: #636e72;" text="Password :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="36.0" layoutY="136.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 8px; -fx-background-color: #f4f6f9; -fx-border-radius: 8; -fx-border-color: #e2e8f0; -fx-border-width: 1;" />
+      <PasswordField fx:id="txtPassword" layoutX="38.0" layoutY="201.0" onAction="#txtPasswordOnAction" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 8px; -fx-background-color: #f4f6f9; -fx-border-color: #e2e8f0; -fx-border-radius: 8; -fx-border-width: 1;" />
+      <Button layoutX="98.0" layoutY="271.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #2460a8; -fx-background-radius: 8px; -fx-effect: dropshadow(three-pass-box, rgba(36, 96, 168, 0.3), 12, 0, 0, 4); -fx-padding: 10 0 10 0; -fx-font-weight: bold; -fx-line-spacing: 1;" text="LOGIN" textFill="#f4efef">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -35,12 +35,12 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="98.0" layoutY="327.0" mnemonicParsing="false" onAction="#btnCreateOnAction" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #ffffff; -fx-background-radius: 8px;" text="Create New Account" textFill="#130bfd" underline="true">
+      <Button layoutX="98.0" layoutY="327.0" mnemonicParsing="false" onAction="#btnCreateOnAction" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #f8fafc; -fx-background-radius: 8px; -fx-underline: false; -fx-font-family: &quot;Segoe UI&quot;;" text="Create New Account" textFill="#1814ff" underline="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="105.0" layoutY="417.0" prefHeight="19.0" prefWidth="176.0" style="-fx-background-color: #ffffff;" text="Designed By @psvide">
+      <Label layoutX="105.0" layoutY="417.0" prefHeight="19.0" prefWidth="176.0" style="-fx-background-color: #f8fafc; -fx-text-fill: #b2bec3; -fx-font-family: &quot;Segoe UI&quot;;" text="Designed By @psvide">
          <font>
             <Font size="14.0" />
          </font>

@@ -7,13 +7,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="483.0" prefWidth="687.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ToDoListFormController">
+<AnchorPane fx:id="root" prefHeight="645.0" prefWidth="1116.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ToDoListFormController">
    <children>
-      <ListView fx:id="lstToDo" layoutY="64.0" prefHeight="387.0" prefWidth="331.0" />
-      <TextField fx:id="txtSelectedToDo" layoutX="349.0" layoutY="76.0" prefHeight="25.0" prefWidth="320.0" />
-      <Button fx:id="btnUpdate" layoutX="599.0" layoutY="115.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Update" textFill="#f8f4f4">
+      <ListView fx:id="lstToDo" layoutX="423.0" layoutY="86.0" prefHeight="429.0" prefWidth="374.0" />
+      <TextField fx:id="txtSelectedToDo" layoutX="846.0" layoutY="144.0" prefHeight="25.0" prefWidth="320.0" style="-fx-padding: 8 10 8 10; -fx-border-color: #e2e8f0;" />
+      <Button fx:id="btnUpdate" layoutX="1092.0" layoutY="188.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Update" textFill="#f8f4f4">
          <font>
             <Font size="14.0" />
          </font>
@@ -21,7 +22,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="btnDelete" layoutX="505.0" layoutY="115.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: red; -fx-background-radius: 7px;" text="Delete" textFill="#fbf6f6">
+      <Button fx:id="btnDelete" layoutX="997.0" layoutY="188.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: red; -fx-background-radius: 7px;" text="Delete" textFill="#f8f0f0">
          <font>
             <Font size="14.0" />
          </font>
@@ -29,7 +30,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button layoutX="339.0" layoutY="224.0" mnemonicParsing="false" onAction="#btnAddNewToDoOnAction" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: Blue; -fx-background-radius: 7px;" text="+ Add New To Do" textFill="#fbf6f6">
+      <Button layoutX="866.0" layoutY="269.0" mnemonicParsing="false" onAction="#btnAddNewToDoOnAction" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #2460a8; -fx-background-radius: 7px; -fx-padding: 8 16 8 16;" text="+ Add New To Do" textFill="#fbf6f6">
          <font>
             <Font size="14.0" />
          </font>
@@ -37,7 +38,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Pane fx:id="subRoot" layoutX="343.0" layoutY="258.0" prefHeight="113.0" prefWidth="331.0" style="-fx-border-color: black;">
+      <Pane fx:id="subRoot" layoutX="849.0" layoutY="342.0" prefHeight="113.0" prefWidth="331.0" style="-fx-border-color: black;">
          <children>
             <Button layoutX="194.0" layoutY="69.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Add To List" textFill="#f8f4f4">
                <font>
@@ -47,14 +48,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="txtNewToDo" layoutX="16.0" layoutY="14.0" onAction="#txtAddOnAction" prefHeight="25.0" prefWidth="299.0" />
+            <TextField fx:id="txtNewToDo" layoutX="16.0" layoutY="14.0" onAction="#txtAddOnAction" prefHeight="25.0" prefWidth="299.0" style="-fx-padding: 8 10 8 10; -fx-border-color: #e2e8f0;" />
          </children></Pane>
-      <Label fx:id="lblUserNameID" layoutX="122.0" layoutY="14.0" prefHeight="43.0" prefWidth="290.0" style="-fx-background-color: #ffffff;" text="username">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Label>
-      <Button layoutX="529.0" layoutY="439.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="29.0" prefWidth="139.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Log Out" textFill="#f8f4f4">
+      <Button layoutX="1034.0" layoutY="568.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" prefHeight="29.0" prefWidth="139.0" style="-fx-background-color: #636e72; -fx-background-radius: 7px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-font-weight: bold; -fx-text-fill: white;" text="Log Out" textFill="#f8f4f4">
          <font>
             <Font size="14.0" />
          </font>
@@ -62,14 +58,25 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="284.0" layoutY="453.0" prefHeight="29.0" prefWidth="175.0" style="-fx-background-color: #ffffff;" text="Designed By @psvide">
+      <Label fx:id="lblUserID" layoutX="898.0" layoutY="108.0" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #ffffff; -fx-font-family: &quot;Segoe UI&quot;; -fx-font-weight: 600; -fx-text-fill: #636e72;" text="user id" textFill="#0a1931">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <VBox layoutX="-31.0" layoutY="-12.0" prefHeight="669.0" prefWidth="396.0" style="-fx-background-color: #0e244d;" />
+      <Label layoutX="542.0" layoutY="564.0" prefHeight="44.0" prefWidth="193.0" style="-fx-background-color: #ffffff;" text="Designed By @psvide">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserID" layoutX="511.0" layoutY="26.0" prefHeight="29.0" prefWidth="123.0" style="-fx-background-color: #ffffff;" text="id">
+      <Label fx:id="lblUserNameID" layoutX="542.0" layoutY="28.0" prefHeight="43.0" prefWidth="290.0" style="-fx-background-color: #ffffff; -fx-font-family: &quot;Segoe UI&quot;; -fx-font-weight: bold; -fx-text-fill: #0a1931;" text="username" textFill="#0a1931">
          <font>
             <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="822.0" layoutY="106.0" prefHeight="29.0" prefWidth="77.0" style="-fx-background-color: #ffffff; -fx-font-family: &quot;Segoe UI&quot;; -fx-font-weight: 600; -fx-text-fill: #636e72;" text="user id :" textFill="#0a1931">
+         <font>
+            <Font size="20.0" />
          </font>
       </Label>
    </children>

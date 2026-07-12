@@ -60,6 +60,10 @@ public class LoginFormController {
                 primaryStage.setScene(scene);
                 primaryStage.setTitle("todo list");
                 primaryStage.centerOnScreen();
+                primaryStage.setMaximized(true);
+
+// 3. Dashboard එක ලස්සනට පෙන්වනවා
+                primaryStage.show();
 
 
             }else{
@@ -73,6 +77,7 @@ public class LoginFormController {
         } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
+
 
 
     }
