@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class practice_array{
 	public static void main(String[]args){
 		Scanner x=new Scanner(System.in);
-		int input;
+		/*int input;
 		int[] arr=new int[6];
 		
 		for(int i=0;i<arr.length;i++){
@@ -22,6 +22,7 @@ public class practice_array{
 			
 		}
 		System.out.println("max value is "+max+". inedx is "+maxindex);
+		x.nextLine();
 		
 		
 		int size=arr.length;
@@ -32,6 +33,9 @@ public class practice_array{
 		for(int i=0;i<arr.length;i++){
 			System.out.print(arr[i]+" ");
 			}
+		 System.out.println("stop");
+
+			
 			
 			//2 Question 
 			int indexs=-1;
@@ -99,7 +103,33 @@ public class practice_array{
 			
 		
 		}
-		System.out.println("sum : "+sum);
+		System.out.println("sum : "+sum);*/
+		
+		
+		//Question 03: 2D Array Matrix 
+		
+		int [][]matrix1={{1,2,3},{4,5,6}};
+		int [][]matrix2={{2,7,8},{1,3,2}};
+		int [][]summatrix=new int[2][3];
+		for(int i=0;i<matrix1.length;i++){
+			for(int j=0;j<matrix1[i].length;j++){
+				summatrix[i][j]=matrix1[i][j]+matrix2[i][j];
+				
+			}
+			
+		}
+		for(int i=0;i<matrix1.length;i++){
+			for(int j=0;j<matrix1[i].length;j++){
+				System.out.print(summatrix[i][j]+" ");
+				
+				
+			}System.out.println();
+			
+		}
+		
+		
+		
+		
 		
 
 	}

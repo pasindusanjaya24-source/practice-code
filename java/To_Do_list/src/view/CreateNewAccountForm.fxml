@@ -8,38 +8,38 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="485.0" prefWidth="335.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateNewAccountFormController">
+<AnchorPane fx:id="root" prefHeight="485.0" prefWidth="335.0" style="-fx-background-color: #F8FAFC;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CreateNewAccountFormController">
    <children>
-      <Label layoutX="65.0" layoutY="14.0" prefHeight="34.0" prefWidth="243.0" style="-fx-background-color: #ffffff;" text="Create New Account">
+      <Label layoutX="49.0" layoutY="2.0" prefHeight="46.0" prefWidth="254.0" style="-fx-background-color: #F8FAFC; -fx-font-weight: bold; -fx-font-family: Segoe UI;" text="Create New Account">
          <font>
-            <Font size="23.0" />
+            <Font size="25.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="108.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #ffffff;" text="User Name :">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtUserName" layoutX="36.0" layoutY="142.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 6px;" />
-      <Label layoutX="28.0" layoutY="174.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #ffffff;" text="Email :">
+      <Label layoutX="28.0" layoutY="81.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #F8FAFC; -fx-font: Segoe UI;" text="User Name :">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtEmail" layoutX="36.0" layoutY="208.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 6px;" />
-      <PasswordField fx:id="txtNewPassword" layoutX="36.0" layoutY="267.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 2px;" />
-      <PasswordField fx:id="txtConfirmPassword" layoutX="36.0" layoutY="335.0" onAction="#txtConfirmPasswordOnAction" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 2px;" />
-      <Label layoutX="28.0" layoutY="233.0" prefHeight="34.0" prefWidth="170.0" style="-fx-background-color: #ffffff;" text="New Password :">
+      <TextField fx:id="txtUserName" layoutX="36.0" layoutY="115.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 6px;" />
+      <Label layoutX="28.0" layoutY="147.0" prefHeight="34.0" prefWidth="102.0" style="-fx-background-color: #F8FAFC; -fx-font-family: Segoe UI;" text="Email :">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="28.0" layoutY="301.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" text="Conform Password :">
+      <TextField fx:id="txtEmail" layoutX="36.0" layoutY="181.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 6px;" />
+      <PasswordField fx:id="txtNewPassword" layoutX="37.0" layoutY="251.0" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 2px;" />
+      <PasswordField fx:id="txtConfirmPassword" layoutX="37.0" layoutY="310.0" onAction="#txtConfirmPasswordOnAction" prefHeight="25.0" prefWidth="243.0" style="-fx-background-radius: 2px;" />
+      <Label layoutX="28.0" layoutY="217.0" prefHeight="34.0" prefWidth="170.0" style="-fx-background-color: #F8FAFC; -fx-font-family: Segoe UI;" text="New Password :">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="btnRegister" layoutX="89.0" layoutY="385.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: green; -fx-background-radius: 7px;" text="Register" textFill="#fbf6f6">
+      <Label layoutX="28.0" layoutY="276.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #F8FAFC; -fx-font-family: Segoe UI;" text="Conform Password :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegister" layoutX="89.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="40.0" prefWidth="158.0" style="-fx-background-color: #00bf8f; -fx-background-radius: 7px; -fx-font-weight: bold; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-font-family: Segoe UI;" text="Register" textFill="#f6f3f3">
          <font>
             <Font size="19.0" />
          </font>
@@ -52,20 +52,20 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="lblpassworddosenotmatched" layoutX="149.0" layoutY="360.0" prefHeight="17.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" text="password doesn't matched" textFill="#ef2c2c">
+      <Label fx:id="lblpassworddosenotmatched" layoutX="159.0" layoutY="335.0" prefHeight="17.0" prefWidth="158.0" style="-fx-background-color: #F8FAFC;" text="password doesn't matched" textFill="#ef2c2c">
          <font>
             <Font size="11.0" />
          </font></Label>
-      <Label fx:id="lblID" layoutX="238.0" layoutY="99.0" text="userid " />
-      <Button fx:id="btnAddUser" layoutX="193.0" layoutY="48.0" mnemonicParsing="false" onAction="#btnAddUserOnAction" prefHeight="40.0" prefWidth="124.0" style="-fx-background-color: blue; -fx-background-radius: 7px;" text="+ add user" textFill="#fbf6f6">
+      <Label fx:id="lblID" layoutX="36.0" layoutY="48.0" prefHeight="34.0" prefWidth="46.0" style="-fx-background-color: #F8FAFC;" text="userid " />
+      <Button fx:id="btnAddUser" layoutX="94.0" layoutY="364.0" mnemonicParsing="false" onAction="#btnAddUserOnAction" prefHeight="34.0" prefWidth="151.0" style="-fx-background-color: #005C97; -fx-background-radius: 7px; -fx-font-weight: bold; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5); -fx-font-family: Segoe UI;" text="+ Add User" textFill="#fbf6f6">
          <font>
-            <Font size="19.0" />
+            <Font size="14.0" />
          </font>
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label fx:id="lblEmailError" layoutX="159.0" layoutY="234.0" prefHeight="17.0" prefWidth="158.0" style="-fx-background-color: #ffffff;" text="Invalid Email Address!" textFill="#ef2c2c">
+      <Label fx:id="lblEmailError" layoutX="185.0" layoutY="208.0" prefHeight="17.0" prefWidth="158.0" style="-fx-background-color: #F8FAFC;" text="Invalid Email Address!" textFill="#ef2c2c">
          <font>
             <Font size="11.0" />
          </font>

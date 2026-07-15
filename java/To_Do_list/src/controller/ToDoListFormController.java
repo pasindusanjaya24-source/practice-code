@@ -29,10 +29,12 @@ public class ToDoListFormController {
     public TextField txtSelectedToDo;
     public Button btnUpdate;
     public Button btnDelete;
+    public Label lblBackground;
 
     public void initialize(){
         String name = db.UserSession.getInstance().getUserName();
         String id = db.UserSession.getInstance().getUserId();
+
 
         if (name != null && id != null) {
             lblUserNameID.setText("Welcome " + name + " " );
