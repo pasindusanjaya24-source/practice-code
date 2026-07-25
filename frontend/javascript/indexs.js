@@ -6,4 +6,4 @@ if(a==14){
     console.log("a is equal to 14.");
 }else{
     console.log("a is not equal to 14.");
-}
+};
