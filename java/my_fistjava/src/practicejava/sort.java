@@ -29,6 +29,21 @@ public class sort {
 			arr[i]=temp;
 		}
 	}
+	//insertion sorting
+	public static void insertion(int []arr){
+		int le=arr.length;
+		for(int i=1;i<le;i++){
+			int key=arr[i];
+			int j=i-1;
+			while(j>=0 && arr[j]>key){
+				arr[j+1]=arr[j];
+				j-=1;
+			}
+			arr[j+1]=key;
+		}
+	}
+	
+	
 	
 	public static void main(String []args){
 		int []arr={5,1,12,-5,16};
@@ -36,9 +51,18 @@ public class sort {
 		for(int i=0;i<arr.length;i++){
 			System.out.print(arr[i]+" ");
 		}
-		//bubbleSort(arr);
-		selection(arr);         
-		System.out.println("\nAfter the sorting: ");
+		bubbleSort(arr);
+		System.out.println("\nAfter the Bubble sorting: ");
+		for(int i=0;i<arr.length;i++){
+			System.out.print(arr[i]+" ");
+		}
+		selection(arr);
+		System.out.println("\nAfter the selection sorting: ");
+		for(int i=0;i<arr.length;i++){
+			System.out.print(arr[i]+" ");
+		}
+		insertion(arr);         
+		System.out.println("\nAfter the  insertion sorting: ");
 		for(int i=0;i<arr.length;i++){
 			System.out.print(arr[i]+" ");
 		}
