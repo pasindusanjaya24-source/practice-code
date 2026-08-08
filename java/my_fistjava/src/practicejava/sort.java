@@ -43,6 +43,42 @@ public class sort {
 		}
 	}
 	
+	//quick sorting 
+	public static void quickSort(int []a,int lb,int ub){
+		if(lb<ub){
+			int local=partition(a,lb,ub);
+			quickSort(a,lb,local-1);
+			quickSort(a,local+1,ub);
+			
+			
+		}
+	}
+	public static int partition(int[]a,int lb,int ub){
+		int pivot=a[lb];
+		int  start=lb;
+		int  end=ub;
+		 while(start<end){
+			 while(start<ub && a[start]<=pivot){
+				 start++;	 
+			 }
+			 while(a[end]>pivot){
+				 end--;
+			 }
+			  
+			 if(start<end){
+				 int temp=a[start];
+				 a[start]=a[end];
+				 a[end]=temp;
+			 }
+		 }
+		 int temp=a[lb];
+		 a[lb]=a[end];
+		 a[end]=temp;
+		 
+		 
+		 return end;
+		 
+	}
 	
 	
 	public static void main(String []args){
@@ -51,20 +87,29 @@ public class sort {
 		for(int i=0;i<arr.length;i++){
 			System.out.print(arr[i]+" ");
 		}
-		bubbleSort(arr);
+		int []arr1={5,10,2,-5,16};
+		bubbleSort(arr1);
 		System.out.println("\nAfter the Bubble sorting: ");
-		for(int i=0;i<arr.length;i++){
-			System.out.print(arr[i]+" ");
+		for(int i=0;i<arr1.length;i++){
+			System.out.print(arr1[i]+" ");
 		}
-		selection(arr);
+		int []arr2={52,21,12,-5,6};
+		selection(arr2);
 		System.out.println("\nAfter the selection sorting: ");
-		for(int i=0;i<arr.length;i++){
-			System.out.print(arr[i]+" ");
+		for(int i=0;i<arr2.length;i++){
+			System.out.print(arr2[i]+" ");
 		}
-		insertion(arr);         
+		int []arr3={5,12,2,-15,6};
+		insertion(arr3);         
 		System.out.println("\nAfter the  insertion sorting: ");
-		for(int i=0;i<arr.length;i++){
-			System.out.print(arr[i]+" ");
+		for(int i=0;i<arr3.length;i++){
+			System.out.print(arr3[i]+" ");
+		}
+		int []arr4={7,6,10,5,9,2,1,15,6};
+		quickSort(arr4,0,arr4.length-1);
+		System.out.println("\nAfter the  Quick sorting: ");
+		for(int i=0;i<arr4.length;i++){
+			System.out.print(arr4[i]+" ");
 		}
 		
 	}
