@@ -64,11 +64,11 @@
          <font>
             <Font size="20.0" />
          </font>
-      </Label>
-      <Label layoutX="542.0" layoutY="564.0" prefHeight="44.0" prefWidth="193.0" style="-fx-background-color: #F8FAFC;" text="Designed By @psvide">
-         <font>
-            <Font size="16.0" />
-         </font>
+         <Label layoutX="542.0" layoutY="564.0" prefHeight="44.0" prefWidth="193.0" style="-fx-background-color: #F8FAFC;" text="Designed By @psvide">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
       </Label>
       <Label fx:id="lblUserNameID" layoutX="542.0" layoutY="28.0" prefHeight="43.0" prefWidth="290.0" style="-fx-background-color: #F8FAFC; -fx-font-family: &quot;Segoe UI&quot;; -fx-font-weight: bold; -fx-text-fill: #0a1931;" text="username" textFill="#0a1931">
          <font>
