@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>my form</title>
+    <link rel="stylesheet" href="form1.css">
+    <style>
+        input {
+            border-radius: 6px;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+    
+    <script src="form1.js" defer></script>
+</head>
+<body>
+<center>
+    <div class="c">
+        <h1>Create Account</h1>
+       
+        <form id="myForm" method="post"> 
+            <label>UserName:</label>
+            <input type="text" placeholder="Enter Name" required><br><br>
+            
+            <label>Email:</label>
+            <input type="email" id="email" required><br><br>
+            
+           
+            <label>Password:</label>
+            <input type="password" id="password" placeholder="amila@123#" required><br><br>
+            
+            <label>Confirm Password:</label>
+            <input type="password" id="confirmPassword" placeholder="amila@123#" required><br><br>
+            
+            
+            <p id="message"></p>
+
+            <input type="submit" value="Submit" class="btn">
+            <input type="reset" value="Reset" class="btn">
+        </form>
+    </div>
+</center>
+</body>
+</html>

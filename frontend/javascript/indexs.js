@@ -7,3 +7,4 @@ if(a==14){
 }else{
     console.log("a is not equal to 14.");
 };
+console.log("hello world!  2");
