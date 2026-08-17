@@ -17,16 +17,39 @@
 		 }
 	 }
 	 
+	 public void appendData(char newData){
+		Node newNode=new Node(newData);
+		
+		if(head== null){
+			head=newNode;
+			return;
+		}
+		Node last=head;
+		while(last.next!=null){
+			last=last.next;
+		}
+		last.next=newNode;
+		
+		 
+	 }
+	 
 	 public static void main(String []args){
-		Node list1=new Node();
+		LinkList2 list1=new LinkList2();
 		list1.head= new Node('A');
 		Node second=new Node('B');
-		Node third=new Node('c');
+		Node third=new Node('C');
 		
 		list1.head.next=second;
 		second.next=third;
-		
+        System.out.println("original nodeList:");
+
 		list1.printList();
+		System.out.println();
+		
+		list1.appendData('D');
+		System.out.println("new nodeList:");
+		list1.printList();
+
 		
 	 }
  }
