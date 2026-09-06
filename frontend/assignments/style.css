@@ -2,26 +2,133 @@
 /* CSS Document */
 
 .container {
-	width: 800px;
+	width: 900px;
+	margin:0 auto;
+	border:1px solid white; 
+	background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
+.container .header {
+    color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+   font-size:66;
+}
+
+.header p {
+    width: 100%; 
+    margin: 4px 0 0 55px; 
+	font-size:12px;
+}
+
 
 .container .footer {
 	background: #4C92FF;
 	padding: 10px;
+	color:white;
 }
 
 .container .content {
 	min-height: 120px;
+	display: flex;
+    flex-direction: row-reverse;
+	
 }
 
 .container .content .sidebar {
 	width: 200px;
-	min-height: 570px;
 	float: right;
 	display: inline;
+	background-color:#F4F8FC;
+	min-height: 829px;
+	margin-left:10px;
+}
+
+.dp {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 13px;
 }
 
 .container .header {
 	background: #4C92FF;
 	height: 80px;
+}
+.counter{
+	margin-bottom:32px;
+	text-align:center;
+}
+.counter span {
+    background-color: #000;
+    color: #fff;
+    padding: 2px 5px;
+    margin-right: 2px;
+    font-family: monospace;
+    font-weight: bold;
+	
+}
+.logo-png{
+	width:45px;
+	height:45px;
+	margin-left:10px;
+}
+
+h2,h4,h3{
+	color:#0f4c81;
+	
+	margin-top:10px;
+}
+h3{
+	
+}
+.main-image{
+	float:right;
+	height:250px;
+	width:270px;
+	margin-right:18px;
+	margin-left:6px;
+	border:3px;
+	border-raduis:4px;
+}
+input{
+	font-size:16px;
+	border-radius:5px;
+	
+}
+.btn{
+	background-color: #1e73be;
+    color: white;
+    border-radius: 9px;
+    cursor: pointer;
+	padding:9px 19px;
+	margin-bottom:46px;
+	
+}
+.btn:hover{
+	color:red;
+}
+table,th,td{
+    border: 1px solid black; 
+	text-align: center;
+	border-collapse: collapse;
+	padding:6px 25px;
+	
+
+    
+}
+table{
+	margin-bottom:20px;
+	border-radius:7px;
+}
+th{
+	color:white;
+	background-color:#1e73be;
 }
