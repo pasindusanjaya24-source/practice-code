@@ -46,3 +46,57 @@ label {
     font-weight: bold;
     margin: 10px 0;
 }
+.card {
+    position: relative; /* Parent එක Relative විය යුතුයි */
+    width: 300px;
+    height: 150px;
+    background-color: #f0f0f0;
+    padding: 15px;
+}
+
+.badge {
+    position: absolute; /* Card එකේ උඩ දකුණු ખૂණටම Fix කිරීමට */
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 4px 8px;
+}
+/* 1. Header Sticky කිරීම */
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Content වලට උඩින් පෙනීමට */
+}
+
+/* 2. Products 6 එක පේළියට තැබීමට Grid භාවිතය */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* එක සමාන Columns 6ක් */
+    gap: 10px;
+}
+
+/* 3. Product Card එක සාදා ගැනීම */
+.product-card {
+    position: relative; /* Badge එක Absolute කිරීමට Anchor point එකක් වේ */
+    background: #fff;
+    padding: 10px;
+}
+
+/* 4. Product Card එක ඇතුළත Content පෙළගැස්වීමට Flexbox */
+.card-details {
+    display: flex;
+    flex-direction: column; /* Items එක යට එක තබයි */
+    gap: 5px;
+}
+
+/* 5. Image එක උඩ Badge එක අලවා තැබීම */
+.discount-badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #f57224;
+    color: white;
+    padding: 2px 6px;
+    font-size: 11px;
+}
