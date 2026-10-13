@@ -1,0 +1,119 @@
+body{
+	margin:0px;
+}
+.container{
+	border: 4px solid black;
+	border-radius:10px;
+		margin:40px auto;  
+
+	 width:75%;
+	max-width: 1500px;
+	align:center;
+	
+}
+.headerBar{
+	background-color:blue;
+	border-radius:10px;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+
+}
+.titleBox{
+	
+	padding-top:2px;
+	padding-left:4px;
+}
+.titleBox h1{
+	font-size:42px;
+	font-weight:bold;
+	line-height:2px;
+
+}
+.titleBox h2{
+	font-size:20px;
+	color: gray;
+}
+.picBox{
+	display:flex;
+	justify-content:center;
+}
+.picBox img{
+	width:130px;
+	height:70px;
+	margin-right:66px;
+}
+.mainContent{
+	margin:15px 15px 15px 15px;
+	display:flex;
+	justify-content:space-between;
+	
+	
+}
+
+.mainTextArea{
+	flex:1;
+}
+
+.mainTextArea h3{
+	color:black;
+	font-size:30px;
+}
+.mainTextArea .featureImage{
+	height:155px;
+	width:190px;
+	float:left;
+	margin-right:50px;;
+	
+}
+.mainTextArea p{
+	font-size:16px;
+	text-align:justify;
+	padding-right:75px;
+	padding-left:15px;
+	
+}
+hr{border: none;              
+    height: 2px;               
+    background-color: #333333;
+	margin: 0px 120px 0px 0px;
+	}
+.sizeBar{
+	
+	border:3px solid black;
+	border-radius:7px;
+	padding:5px 8px 120px 8px;
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+	background-color:lightblue;
+	width:200px;
+	
+}
+
+.sizeBar .label{
+	color:darkblue;
+	font-size:18px;
+}
+.sizeBar .detail{
+	color:black;
+	font-size:20px;
+	line-height:1px;
+	font-size:14px;
+}
+/* Complete this CSS file only. DO NOT modify index.html. */
+/* 1. Page background, font and default spacing */
+/* 2. Main container: width, centering, border and shadow */
+/* 3. Inner container */
+/* 4. Header: background, height, padding and layout */
+/* 5. Header title and subtitle */
+/* 6. Header image */
+/* 7. Main two-column layout */
+/* 8. Main text area */
+/* 9. Sidebar / sizeBar */
+/* 10. Headings and paragraphs */
+/* 11. Feature images */
+/* 12. Hyperlinks and :hover effect */
+/* 13. Sidebar labels and details */
+/* 14. Margins, padding and borders */
+/* 15. Overflow/responsive control if required */
