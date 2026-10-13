@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width: 900px;
+	border: 1px solid lightgrey;
+	margin:10px auto;
+	border-radius:10px;
+	
+}
+
+.container .footer {
+	background: #4C92FF;
+	padding: 10px;
+	color:white;
+	font-size:15px; 
+}
+
+.container .content {
+	min-height: 120px;
+}
+.container .content h2{
+		color:blue;
+		font-weight:bold;
+		font-size:30px;
+	
+}
+
+
+.maincontent{
+	margin:12px;
+}
+.image{
+	float:right;
+	height:220px;
+	width:240px;
+	
+	margin-bottom:10px;
+}
+
+.container .content .sidebar {
+	width: 200px;
+	min-height:870px;
+	float: right;
+	display: inline;
+	background-color:lightblue;
+	display:inline;
+	margin-top:3px;
+	margin-left:10px;
+	border-radius:8px;
+}
+h4{
+	color:blue;
+	font-size:30px;
+}
+table{
+	border-radius:6px;
+	margin-right:6px;
+	margin-bottom:6px;
+}
+th{
+	background-color:blue;
+	color:white;
+}
+th,td{
+	padding:6px 25px;
+	
+	
+}
+table,th,td{
+	border:1px solid black;
+	border-collapse: collapse;
+	
+}
+.sidebar span{
+	color:white;
+	background-color:black;
+	cell-spacing:2px;
+}
+.sidebar img{
+	height:50px;
+	width:50px;
+	
+}
+.sidebar button{
+	color:white;
+	background-color:blue;
+	border-radius:5px;
+	padding: 5px 33px 5px 33px;
+	margin-left:3px;
+}
+
+.sidebar h3{
+	color:blue;
+	font-size:25px;
+	margin-left:15px;
+}
+.sidebar .contactBox p{
+	
+	font-size:18px;
+	color:black;
+	
+}
+.container .header {
+	background: #4C92FF;
+	color:white;
+	margin-top:0px;
+	height:100px;
+}
+.container .header h1{
+		margin-top:0px;
+
+	margin-bottom:10px;
+	font-size:44px;
+}
+.container .header h2{
+	padding-left:55px;
+	margin-bottom:10px;
+	font-size:14px;
+}
+
+span{
+	margin:1px;
+	padding:3px;
+	margin-left:8px;
+	
+	
+}
+
