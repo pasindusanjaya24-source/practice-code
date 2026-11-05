@@ -50,6 +50,31 @@ public class Arrayss{
 		}
 		return smallest;
 	}
+	public static int dif(int max,int min){ //differences between largest and smallest
+		return max-min;
+	}
+	
+	public static void reversedArray(int[]arr,int[]reArray){
+		int n=arr.length;                
+		for(int i=0;i<n;i++){           //reverse a Array
+			reArray[i]=arr[n-1-i];
+		}
+	}
+	public static void duplicateArray(int[]arr){
+		int n=arr.length;
+		int l=0;
+		int count=0;
+		while(l<(n-1)){
+			for(int i=l+1;i<n;i++){
+				if(arr[i]==arr[l]){
+					count++;
+					System.out.print(arr[l]+",");
+				}
+			}
+			l+=1;
+		}
+		System.out.println("duplicate count is: "+count);
+	}
 
 	public static void main(String []args){
 		Scanner input=new Scanner(System.in);
@@ -79,16 +104,28 @@ public class Arrayss{
 			System.out.println("element is found.it is in "+(result)+" index and it is "+(result+1)+" element");
 		}
 		
-		int []array1=new int[6];
+		int []array1=new int[5];
 		copyArray(arr,array1);
 		System.out.println("after coping new array,");
 		for (int i=0;i<size;i++){
 			System.out.print("["+array1[i]+"] ");
 		}
 		System.out.println();
-		System.out.println("large element is: "+largeElement(arr));
+		int largeE=largeElement(arr);
+		System.out.println("large element is: "+largeE);
+		int smallestE=smallestElement(arr);
+		System.out.println("smallest element is: "+smallestE);
+		System.out.println("differences between large and smallest: "+dif(largeE,smallestE));
+		
+		int []rearray=new int[5];
+		reversedArray(arr,rearray);
+		System.out.print("revesed array:");
+		for(int i=0;i<rearray.length;i++){
+			System.out.print("["+rearray[i]+" ]");
+		}
 		System.out.println();
-		System.out.println("smallest element is: "+smallestElement(arr));
+		duplicateArray(arr);
+	
 	}
 	
 }
