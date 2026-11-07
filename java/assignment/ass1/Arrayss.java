@@ -75,6 +75,85 @@ public class Arrayss{
 		}
 		System.out.println("duplicate count is: "+count);
 	}
+	
+	public static void evenOdd(int[]arr){   //select even and odd numbers 
+		int evenCount=0;
+		int oddCount=0;
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%2==0){
+				evenCount++;
+			}else{
+				oddCount++;
+			}
+		}
+		int []arrE=new int[evenCount];
+		int []arrO=new int[oddCount];
+		int evenIndex=0;
+		int oddIndex=0;
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]%2==0){
+				arrE[evenIndex]=arr[i];
+				evenIndex++;
+			}else{
+				arrO[oddIndex]=arr[i];
+				oddIndex++;
+			}
+		}
+		System.out.print("even array: ");
+		for(int i=0;i<evenCount;i++){
+			System.out.print("["+arrE[i]+"] " );
+		}
+		System.out.println();
+		System.out.print("odd array: ");
+		for(int i=0;i<oddCount;i++){
+			System.out.print("["+arrO[i]+"] " );
+		}
+	}
+	public static int[] insertionSort(int[]arr){  //assending sort
+		int n=arr.length;
+		for(int i=0;i<n;i++){
+			int key=arr[i];
+			int j=i-1;
+			while(j>=0 && key<arr[j]){
+				arr[j+1]=arr[j];
+				j--;
+			}
+			arr[j+1]=key;
+		}
+		
+		return arr;
+	}
+	public static int[] decInsertionSort(int[]arr){  //deceding sort
+		int n=arr.length;
+		for(int i=0;i<n;i++){
+			int key=arr[i];
+			int j=i-1;
+			while(j>=0 && key>arr[j]){
+				arr[j+1]=arr[j];
+				j--;
+			}
+			arr[j+1]=key;
+		}
+		return arr;
+	}
+	
+	public static void lastOne(int []a,int []d){
+		int n1=a.length;
+		int n2=d.length;
+		int newN=n1+n2;
+		int []lastArray=new int[newN];
+		int ll=0;
+		for(int i=0;i<n1;i++){
+			lastArray[ll]=d[i];
+			ll++;
+			lastArray[ll]=a[i];
+			ll++;
+		}
+		
+		for(int i=0;i<newN;i++){
+			System.out.print(lastArray[i]+" ");
+		}
+	}
 
 	public static void main(String []args){
 		Scanner input=new Scanner(System.in);
@@ -125,6 +204,26 @@ public class Arrayss{
 		}
 		System.out.println();
 		duplicateArray(arr);
+		System.out.println();
+		evenOdd(arr);
+		
+		int[] assArray=insertionSort(arr);
+		System.out.println();
+		System.out.print("assecending: ");
+		for (int i=0;i<size;i++){
+			System.out.print("["+assArray[i]+"] ");
+		}
+		
+		int []desArraay=decInsertionSort(array1);
+		System.out.println();
+		System.out.println("decending: ");
+		
+		for (int i=0;i<size;i++){
+			System.out.print("["+desArraay[i]+"] ");
+		}
+		System.out.println();
+		lastOne(assArray,desArraay);
+		
 	
 	}
 	
