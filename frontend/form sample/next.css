@@ -1,6 +1,13 @@
 form{
-	margin:50px;
+	
 	font-size=verdana;
+	border-radius:10px;
+	border:2px solid black;
+	margin:10px 10px 20px 17px;
+}
+
+fieldset{
+	margin:10px 17px 20px 17px;
 }
 
 .btn{
@@ -8,7 +15,11 @@ form{
 	height:55px;
 	 border-radius:14px;
 	 font-size:19px;
+	 cursor:pointer;
+	 margin:10px 0px 20px 87px;
 }
-.btn :hover{
-	cursor:pointer;
+.btn:hover{
+	color:red;
+	transform:translateY(-6px);
+	background-color:navy;
 }

@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+.container {
+	width: 800px;
+}
+
+.container .footer {
+	background: #4C92FF;
+	padding: 10px;
+}
+
+.container .content {
+	min-height: 120px;
+}
+
+.container .content .sidebar {
+	width: 200px;
+	min-height: 570px;
+	float: right;
+	display: inline;
+}
+
+.container .header {
+	background: #4C92FF;
+	height: 80px;
+}
