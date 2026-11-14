@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>my new form</title>
+</head>
+<link rel="stylesheet" href="next.css">
+
+<body>
+	<form action="process.php" method="post">
+	<h1>Reservation Request </h1>
+	<fieldset>
+		<legend>General information</legend>
+		<label for="date">Arrival date:</label>
+		<input type="date" required><span> Arrival date is invalids</span><br><br>
+		<label for="n">Nights:</label>
+		<input type="text" id="name"required><span>  Nights must be a number.</span><br><br>
+		<label for="n">Adults:</label>
+        <input type="number" id="age" name="age" max="10" min="-10" step="5"><br><br>	
+	    <label for="n">Children:</label>
+        <input type="number" id="age" name="age" max="10" min="0" step="1"><br><br>	
+	
+	</fieldset>
+	<fieldset>
+		<legend>Preferences</legend>
+		<label>Room Type:</label>
+		<input type="radio" name="g">Standard
+		<input type="radio" name="g">Business
+		<input type="radio" name="g">Suite<br><br>
+		
+	    <label>Bed Type:</label>
+		<input type="radio" name="g">King
+		<input type="radio" name="g">double Double
+		<input type="radio" name="g">Suite<br><br>
+		<input type="checkbox">Smoking
+	
+	</fieldset>
+	<fieldset>
+		<legend>Preferences</legend>
+		<label>Name:</label>
+		<input type="text" name="g" required><span>Name is required</span><br><br>
+		<label>Email:</label>
+		<input type="email" id="email" name="email" autocomplete="email" placeholder="example@gmail.com"><span>Email is required</span><br><br>
+		<label>Phone:</label>
+		<input type="text" name="g" placeholder="123-456-789"><span>Phone Number is required</span></span><br><br>
+		
+	</fieldset><br>
+	<input type="submit" value="Submit Reservation" class="btn">
+	<input type="reset" value="Clear" class="btn">
+	
+	
+	</form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+form{
+	margin:50px;
+	font-size=verdana;
+}
+
+.btn{
+	width:200px;
+	height:55px;
+	 border-radius:14px;
+	 font-size:19px;
+}
+.btn :hover{
+	cursor:pointer;
+}
