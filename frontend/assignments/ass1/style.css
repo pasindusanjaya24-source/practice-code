@@ -1,8 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 
+body{
+	margin:0px 10px 10px 120px;
+	border:1px solid white;
+	border-radius:10px;
+}
 .container {
-	width: 800px;
+	width:800px;
 }
 
 .container .footer {
@@ -16,12 +21,71 @@
 
 .container .content .sidebar {
 	width: 200px;
-	min-height: 570px;
+	min-height: 1055px;
 	float: right;
 	display: inline;
+	margin:0 0 0 10px;
+	background-color:lightblue;
+	
 }
 
 .container .header {
 	background: #4C92FF;
-	height: 80px;
+	height: 100px;
+	color:white;
+	
+}
+span{
+	margin:3px;
+	background-color:black;
+	color:white;
+	padding:2px;
+}
+.logo{
+	height:60px;
+	width:60px;
+}
+.image{
+	height:260px;
+	width:260px;
+	float:right;
+	margin-bottom:100px;
+}
+.maincontent{
+	width:600px;
+}
+table{
+	border-spacing:0px;
+	margin-bottom:4px;
+	border:2px solid black;
+	border-radius:10px;
+	overflow:hidden;
+}
+table th{
+	background-color: #4C92FF;
+	padding:16px;
+	
+	
+}
+table td{
+	padding:8px;
+}
+
+.container .footer{
+	color:white;
+	font-size:22px;
+}
+
+#email{
+	border-radius:8px;
+}
+#btn{
+	border-radius:8px;
+	background-color: #4C92FF;
+	padding:10px;
+}
+#btn:hover{
+	tranform:translateY(-15px);
+	cursor:pointer;
+	color:red;
 }
