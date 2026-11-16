@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>no one </title>
+</head>
+
+<body>
+	<form>
+	<h1>Student form</h1>
+		<table>
+			<tr>
+				<td><label for="name">Name:</label></td>
+				<td><input type="text" id="name"></td>
+			</tr>
+			<tr>
+				<td><label for="id">ID:</label></td>
+				<td><input type="text" id="id"></td>
+			</tr>
+			<tr>
+				<td><label for="email">Email:</label></td>
+				<td><input type="email" id="email" placeholder="abc12@gmail.com" ><span id="message"></span></td>
+			</tr>
+			<tr>
+				<td><label for="num">Number:</label></td>
+				<td><input type="text" id="nymber" placeholder="123-456-789"></td>
+			</tr>
+			<tr>
+				<td><label for="age">Age:</label></td>
+				<td><input type="number" id="age"></td>
+			</tr>
+			<tr>
+				<td><label for="course">Course:</label></td>
+				<td><select id="course">
+					<option value="">-- Select a Course --</option>
+					<option>computer science</option>
+					<option>physical science</option>
+					<option>Health science</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><input type="submit" id="submit" value="Submit"></td>
+				<td><input type="reset" id="submit" value="Reset" ></td>
+			</tr>
+			<tr>
+				<td><a href="ex23.html"><input type="button" value="Back"></a></td>
+				<td><a href="#"><input type="button" value="Help"></a></td>
+			</tr>
+		
+		</table>
+		<script>
+			const form=document.querySelector("form");
+			form.addEventListener("submit",function(event){
+			event.preventDefault();
+			let email=document.getElementById("email").value.trim();
+			let age=document.getElementById("age").value.trim();
+			let select=document.getElementById("course").value.trim();
+			if(email==""){
+				message.innerHTML="invalid email ";
+				message.style.color="red";
+				return;
+			}
+			if(age=="" || age>60 || age<18){
+			 alert("age is invalid!");
+			 return;
+			}
+			if(select==""){
+				alert("course is mubt be include");
+				return;
+			}
+			alert("succesfully submitted");
+			});
+		</script>
+
+	</form>
+	
+
+</body>
+</html>

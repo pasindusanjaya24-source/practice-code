@@ -1,112 +1,96 @@
 body{
-	
-	background-color:gray;
+	background-color:grey;
 }
 .container{
 	margin:20px auto;
+	width:990px;
+	border:2px solid black;
+	border-radius:10px;
 	background-color:white;
-	border:3px solid black;
-	border-radius:8px;
-	width:1150px;
 }
-.headerBar{
+.container .headerBar{
+	background-color:dodgerblue;
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
-	background-color:blue;
+	border-radius:10px;
+	height:15%;
 }
 
-.headerBar .titleBox{
-	margin-left:20px;
+.container .headerBar .titleBox{
+	margin-left:4px;
+	
+	
 }
-.headerBar .titleBox h1{
-	font-size:45px;
+.container .headerBar .titleBox h1{
+	font-size:42px;
+	
 }
-
-.headerBar .titleBox h2{
-	color:grey;
-	font-size:24px;;
+.container .headerBar .titleBox h2{
+		color:grey;
 }
-.headerBar .picBox{
+.container .headerBar .picBox{
 	display:flex;
+	margin-left:4px;
 	align-items:center;
-	margin-right:40px;
+	margin-right:54px;
+	
 }
-.headerBar .picBox img{
+.container .headerBar .picBox img{
 	width:200px;
 	height:100px;
+	border-radius:8px;
+	
 }
-
 
 .mainContent{
 	display:flex;
 	flex-direction:row;
 	justify-content:space-between;
+	
+}
+.mainContent .mainTextArea{
+	margin-left:15px;
+}
+.mainContent .mainTextArea h3{
+	font-size:28px;
+	font-weight:bold;
 }
 
 .mainContent .mainTextArea .featureImage{
-	width:250px;
-	height:150px;
+	height:200px;
+	width:350px;
 	float:left;
-	margin-left:8px;
-	margin-right:25px;
-	margin-bottom:25px;
-	
+	margin-right:18px;
 }
-.mainContent .mainTextArea .featureImage +p{
-	width:75%;
+.mainContent .mainTextArea .featureImage + p + p{
+	clear:left;
+	width:60%;
 }
-.mainContent .mainTextArea .featureImage + p + p {
-    clear: left;
-	width:50%;
-	margin-left:9px;
+.mainContent .mainTextArea .featureImage + p{
+	width:85%;
 }
 
 .mainContent .sizeBar{
-	width:35%;
+	width:55%;
+	border:3px solid black;
+	border-radius:10px;
 	background-color:lightblue;
-	padding-left:13px;
-	margin:10px 12px 10px 10px;
-	border:2px solid black;
-	border-radius:8px;
-	padding:20px;
-}
+	margin:6px 6px 6px 0;
+	height:
 
-.mainContent .sizeBar{
+}
+.mainContent .sizeBar .label{
+	font-size:20px;
+	color:darkblue;
 	
 }
-
-.sizeBar .label{
-	font-weight:bold;
-	font-size:20px;;
-	color:darkblue;
-}
-.sizeBar .detail{
-	font-size:16px;;
+.mainContent .sizeBar .detail{
 	color:black;
+	
 }
-.sizeBar .detail a{
-	color:black;
-}
-.sizeBar .detail a:hover{
+.mainContent .sizeBar .detail a:hover{
 	color:blue;
 	cursor:pointer;
 	
 }
-
-/* Complete this CSS file only. DO NOT modify index.html. */
-/* 1. Page background, font and default spacing */
-/* 2. Main container: width, centering, border and shadow */
-/* 3. Inner container */
-/* 4. Header: background, height, padding and layout */
-/* 5. Header title and subtitle */
-/* 6. Header image */
-/* 7. Main two-column layout */
-/* 8. Main text area */
-/* 9. Sidebar / sizeBar */
-/* 10. Headings and paragraphs */
-/* 11. Feature images */
-/* 12. Hyperlinks and :hover effect */
-/* 13. Sidebar labels and details */
-/* 14. Margins, padding and borders */
-/* 15. Overflow/responsive control if required */
