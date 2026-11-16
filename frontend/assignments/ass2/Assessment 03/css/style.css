@@ -1,3 +1,99 @@
+body{
+	
+	background-color:gray;
+}
+.container{
+	margin:20px auto;
+	background-color:white;
+	border:3px solid black;
+	border-radius:8px;
+	width:1150px;
+}
+.headerBar{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	background-color:blue;
+}
+
+.headerBar .titleBox{
+	margin-left:20px;
+}
+.headerBar .titleBox h1{
+	font-size:45px;
+}
+
+.headerBar .titleBox h2{
+	color:grey;
+	font-size:24px;;
+}
+.headerBar .picBox{
+	display:flex;
+	align-items:center;
+	margin-right:40px;
+}
+.headerBar .picBox img{
+	width:200px;
+	height:100px;
+}
+
+
+.mainContent{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+
+.mainContent .mainTextArea .featureImage{
+	width:250px;
+	height:150px;
+	float:left;
+	margin-left:8px;
+	margin-right:25px;
+	margin-bottom:25px;
+	
+}
+.mainContent .mainTextArea .featureImage +p{
+	width:75%;
+}
+.mainContent .mainTextArea .featureImage + p + p {
+    clear: left;
+	width:50%;
+	margin-left:9px;
+}
+
+.mainContent .sizeBar{
+	width:35%;
+	background-color:lightblue;
+	padding-left:13px;
+	margin:10px 12px 10px 10px;
+	border:2px solid black;
+	border-radius:8px;
+	padding:20px;
+}
+
+.mainContent .sizeBar{
+	
+}
+
+.sizeBar .label{
+	font-weight:bold;
+	font-size:20px;;
+	color:darkblue;
+}
+.sizeBar .detail{
+	font-size:16px;;
+	color:black;
+}
+.sizeBar .detail a{
+	color:black;
+}
+.sizeBar .detail a:hover{
+	color:blue;
+	cursor:pointer;
+	
+}
+
 /* Complete this CSS file only. DO NOT modify index.html. */
 /* 1. Page background, font and default spacing */
 /* 2. Main container: width, centering, border and shadow */
