@@ -1,0 +1,56 @@
+body{
+	background-color:grey;
+}
+.container{
+	margin:20px auto;
+	width:800px;
+	background-color:white;
+	border:3px solid black;
+	border-radius:10px;
+}
+.incontainer{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+}
+.container .nav{
+	background-color:lightblue;
+	width:20%;
+	border:2px solid black;
+	border-radius:8px;
+	margin-left:3px;
+	margin-top:3px;
+	margin-right:3px;
+}
+.container .nav a{
+	font-size:18px;
+	
+}
+.container .nav a:hover{
+	cursor:pointer;
+	color:red;
+}
+.main{
+	margin-left:8px;
+	
+	
+}
+.main{
+	text-align:center;
+}
+.main h1{
+	text-align:center;
+}
+
+.main .el{
+    width: fit-content;
+	margin:auto;
+
+}
+
+
+footer{
+	background-color:yellow;
+	padding:6px;
+	border-radius:10px;
+}
