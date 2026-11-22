@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>newonejs</title>
+</head>
+<body>
+<form>
+	<center><h1>Student Details</h1>
+	<table>
+		<tr>
+			<td><label for="name">Name: </label></td>
+			<td><input type="text" id="name"></td>
+		</tr>
+		<tr>
+			<td><label for="id">ID: </label></td>
+			<td><input type="text" id="id"></td>
+		</tr>
+		<tr>
+			<td><label for="email">Email: </label></td>
+			<td><input type="email" id="email"><span id="message"></span></td>
+		</tr>
+		<tr>
+			<td><label for="pn">Telephone Number: </label></td>
+			<td><input type="text" id="number"></td>
+		</tr>
+		<tr>
+			<td><label for="Age">Age: </label></td>
+			<td><input type="number" id="age"></td>
+		</tr>
+		<tr>
+			<td><label for="course">Course: </label></td>
+			<td>
+				<select id="select">
+					<option value="">--select course--</option>
+					<option>Computer Science</option>
+					<option>Physical Science</option>
+					<option>Health Science</option>
+			
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="submit" vlaue="submit" id="submit">
+			</td>
+			<td>
+				<input type="reset" vlaue="Reset" id="reset">
+			</td>
+		</tr>
+		<tr>
+			<td><input type ="file"></td>
+		</tr>
+		<tr>
+			<td><input type ="color"></td>
+		</tr>
+	
+	</table>
+	
+	</center>
+	
+	<script>
+	const form=document.querySelector("form");
+	form.addEventListener("submit",function(event){
+		event.preventDefault();
+		let name=document.getElementById("name").value.trim();
+		let id=document.getElementById("id").value.trim();
+		let email=document.getElementById("email").value.trim();
+		let num=document.getElementById("number").value.trim();
+		let age=document.getElementById("age").value.trim();
+		let select=document.getElementById("select").value.trim();
+		
+		if(name=="" || !isNaN(name)){
+			alert("invalid name!");
+			return;
+		}
+		if(id==""){
+			alert("id must include!");
+			return;
+		}
+		if(email=="" || !email.includes(".")){
+			message.innerHTML="invalid email";
+			message.style.color="red";
+			return;
+		}else{
+			message.innerHTML="email is valid";
+			message.style.color="blue";
+			
+		}
+		
+		
+		if(num="" || isNaN(num) || num.length != 10){
+			alert("phone number is invalid");
+			return;
+		}
+		if(age="" || age<18 || age >60){
+			alert("age is invalid");
+			return;
+		}
+		if(select=="" ){
+			alert("please selct a option in course");
+			return;
+		}
+		
+		alert("succesfully submit.");
+	});b
+	
+	
+	</script>
+	
+</form>
+</body>
+</html>
